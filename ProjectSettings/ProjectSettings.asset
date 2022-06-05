@@ -644,7 +644,7 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Build: 0
-    Collab: 1
+    Collab: 0
     Game Performance: 0
     Legacy Analytics: 0
     Purchasing: 0
@@ -666,7 +666,7 @@ PlayerSettings:
   cloudProjectId: 7d2e8343-56f8-4c99-9766-32cf8ace33d7
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Jam Jam 22
+  projectName: JamJam22
   organizationId: ieperen3039
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
