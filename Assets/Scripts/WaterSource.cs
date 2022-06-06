@@ -12,9 +12,12 @@ public class WaterSource : MonoBehaviour
     public float moneyResources;
     public float energyResources;
 
+    public PlayerInventory inventory;
+
     // Start is called before the first frame update
     void Start()
     {
+        inventory.PrintHello();
 
     }
 
@@ -24,18 +27,12 @@ public class WaterSource : MonoBehaviour
 
     }
 
-    float GenerateWater()
+    void GenerateWater()
     {
-        if ( moneyResources > moneyPerTick &&
-             energyResources > energyPerTick )
+        if (inventory.Money > moneyPerTick)
         {
-            moneyResources -= moneyPerTick;
-            energyResources -= energyPerTick;
-            return waterPerTick;
-        }
-        else
-        {
-            return 0.0f;
+            inventory.RemoveMoney(moneyPerTick);
+            inventory.AddWater(waterPerTick);
         }
     }
 }
