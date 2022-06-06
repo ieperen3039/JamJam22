@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WaterSourcePlacer : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class WaterSourcePlacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && activeSourcePrefab != null)
+        if (Input.GetButtonDown("Fire1") && activeSourcePrefab != null && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector3 mousePos = Input.mousePosition;
 
