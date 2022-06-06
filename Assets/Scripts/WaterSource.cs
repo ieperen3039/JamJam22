@@ -17,7 +17,6 @@ public class WaterSource : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory.PrintHello();
 
     }
 
@@ -29,6 +28,7 @@ public class WaterSource : MonoBehaviour
 
     void GenerateWater()
     {
+        if (inventory == null) { return; }
         if (inventory.Money > moneyPerTick)
         {
             inventory.RemoveMoney(moneyPerTick);
