@@ -19,7 +19,7 @@ public class SeasonTimer : MonoBehaviour
     public Sprite testImage;
 
     public Slider sliderSeasons;
-    public float time = 48;
+    public float time = 960;
 
     // Start is called before the first frame update
     void Start()
