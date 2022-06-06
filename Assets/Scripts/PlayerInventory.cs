@@ -27,6 +27,11 @@ public class PlayerInventory : MonoBehaviour
         waterUpdateEvents.Invoke();
     }
 
+    public void PrintHello()
+    {
+        Debug.Log("PrintHello function was indeed called");
+    }
+
     public void RemoveWater(float amountLiters)
     {
         if (amountLiters > Water)
