@@ -10,6 +10,9 @@ public class WaterSourcePlacer : MonoBehaviour
     [SerializeField]
     private WaterSource FactorySource;
 
+    [SerializeField]
+    private PlayerInventory _inventory;
+
     private WaterSource activeSourcePrefab = null;
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,11 @@ public class WaterSourcePlacer : MonoBehaviour
             Vector3 spawnPos = Camera.main.ScreenToWorldPoint(mousePos);
             spawnPos.z = 10;
 
-            Instantiate(activeSourcePrefab, spawnPos, Quaternion.identity);
+            if (_inventory.Money > activeSourcePrefab.buildingCost)
+            {
+                _inventory.RemoveMoney(activeSourcePrefab.buildingCost);
+                Instantiate(activeSourcePrefab, spawnPos, Quaternion.identity);
+            }
         }
     }
 }
