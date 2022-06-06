@@ -33,7 +33,6 @@ public class CityBehaviour : MonoBehaviour
         growthProgress = 0.0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float factionOfPeopleProducingWater = GetFractionOfProductionUsed();
